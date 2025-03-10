@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html ⚡ lang="id" itemscope="itemscope" itemtype="https://schema.org/WebPage">
 <head>
@@ -41,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://res.cloudinary.com/dvmm9a0m6/image/upload/v1732127139/favicon-menang123_v7qp2n.png" type="image/x-icon" />
+    <link rel="icon" href="https://imagephotoku.io/images/2025/03/08/favicon_menang123.png" type="image/x-icon" />
     <link rel="preload" as="script" href="https://cdn.ampproject.org/v0.js">
     <script async src="https://cdn.ampproject.org/v0.js" nonce="MTk1NDcyMjU3MiwzMjcwMDE0NDIw"></script>
     <style amp-boilerplate>
@@ -515,7 +514,7 @@
 
 <body>
     <header>
-        <amp-img id="image" src="https://res.cloudinary.com/dvmm9a0m6/image/upload/v1732127488/menang123-cov-amp_dthazo.webp"
+        <amp-img id="image" src="https://imagephotoku.io/images/2025/03/10/menang123-jus.jpg"
         alt="MENANG123" width="900" height="700" layout="intrinsic"></amp-img>
     </header>
     <div class="created by ">
@@ -523,14 +522,37 @@
         <div class="MENANG123">
         </div>
     </div>
-	<br>
+    <br>
     <div id="links">
-        <a class="link1 animated fadeInLeft slow" href="https://m123land.xyz/home?register&ref=nonref" target="_blank" rel="nofollow">DAFTAR</a>
-	</div>
-	<div id="links">
-        <a class="link1 animated fadeInLeft slow" href="https://m123land.xyz/home?register&ref=nonref" target="_blank" rel="nofollow">LOGIN</a>
-	</div>
+        <a class="link1 animated fadeInLeft slow" id="link_header_register" target="_blank" rel="nofollow">DAFTAR</a>
+    </div>
+    <div id="links">
+        <a class="link1 animated fadeInLeft slow" id="link_header_login" target="_blank" rel="nofollow">LOGIN</a>
+    </div>
+
+  <script async>
+        const domainName = "https://m123land.xyz/";
+        const referral = "home?register&ref=nonref"
+        const queryString = window.location.search;
+        const affClickId = new URLSearchParams(window.location.search).get("aff_click_id");
 
 
+        const link1 = document.getElementById('link_header_register');
+        const link2 = document.getElementById('link_header_login');
+
+
+        // Come from ads
+        if (queryString.length > 0) {
+            link1.href = domainName + queryString;
+            link2.href = domainName + queryString;
+
+            document.cookie = `aff_click_id=${affClickId}; path=/; max-age=2592000`; // 30 days;
+        }
+        // Come from google discovery
+        else {
+            link1.href = domainName + referral;
+            link2.href = domainName + referral;
+        }
+    </script>
 </body>
 </html>
